@@ -1,0 +1,16 @@
+
+group 'online.gladikov.laboratory.simple-service'
+
+	
+	dependencies {
+		implementation project(':common-lib')
+		testImplementation 'org.springframework.boot:spring-boot-starter-test'
+		implementation 'org.springframework.boot:spring-boot-starter-web'
+		testImplementation 'org.springframework.boot:spring-boot-starter-test'
+		implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+		implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+		implementation 'io.github.openfeign:feign-jackson:13.2.1'
+	}
+
+
+

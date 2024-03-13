@@ -1,0 +1,3 @@
+
+rootProject.name = 'laboratory'
+include  'admin-service', 'common-lib', 'gateway-service', 'discovery-service', 'simple-service'

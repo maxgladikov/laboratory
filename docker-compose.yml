@@ -1,0 +1,155 @@
+version: '3.8'
+services:
+
+  elasticsearch:
+    image: elasticsearch:8.3.3
+    container_name: ems.elasticsearch
+    restart: always
+    ports:
+      - "9200:9200"
+    environment:
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - discovery.type=single-node
+      - bootstrap.memory_lock=true
+      - xpack.security.enabled=false
+    networks:
+      - backend
+
+  logstash:
+    image: logstash:8.3.3
+    container_name: ems.logstash
+    ports:
+      - "5044:5044"
+      - "5000:5000/tcp"
+      - "5000:5000/udp"
+      - "9600:9600"
+    volumes:
+      - ./configurations/logstash.conf:/usr/share/logstash/pipeline/logstash.conf:ro
+      - ./configurations/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
+    environment:
+      - "LS_JAVA_OPTS=-Xms256m -Xmx256m"
+    networks:
+      - backend
+    depends_on:
+      - elasticsearch
+
+  kibana:
+    image: kibana:8.3.3
+    container_name: ems.kibana
+    ports:
+      - "5601:5601"
+    environment:
+      ELASTICSEARCH_URL: http://elasticsearch:9200
+      ELASTICSEARCH_HOSTS: '["http://elasticsearch:9200"]'
+    networks:
+      - backend
+    depends_on:
+      - elasticsearch
+
+  discovery-service:
+    image: "aston/ems.discovery-service:latest"
+    pull_policy: never
+    container_name: ems.eureka
+    ports:
+      - '8000:8000'
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    healthcheck:
+      test: "curl --fail --silent localhost:8000/actuator/health/readiness | grep UP || exit 1"
+      interval: 2s
+      timeout: 3s
+      retries: 2
+      start_period: 20s
+    networks:
+      - backend
+
+  gateway:
+    image: "aston/ems.gateway-service:latest"
+    pull_policy: never
+    container_name: ems.gateway
+    ports:
+      - '8080:8080'
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    healthcheck:
+      test: "curl --fail --silent localhost:8080/actuator/health/readiness | grep UP || exit 1"
+      interval: 2s
+      timeout: 3s
+      retries: 2
+      start_period: 20s
+    networks:
+      - backend
+    depends_on:
+      - discovery-service
+
+  admin-db:
+    image: postgres:15.4
+    #pull_policy: never
+    container_name: ems.admin-db
+    restart: always
+    environment:
+      POSTGRES_DB: 'ems'
+      POSTGRES_USER: 'max'
+      POSTGRES_PASSWORD: 'pas'
+      TZ: "Asia/Yekaterinburg"
+      PGTZ: "Asia/Yekaterinburg"
+    networks:
+      - backend
+    ports:
+      - '5432:5432'
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 1G
+
+  admin-service:
+    image: "aston/ems.admin-service:latest"
+    pull_policy: never
+    container_name: ems.admin-service
+    ports:
+      - '9000:9000'
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    healthcheck:
+      test: "curl --fail --silent localhost:9000/actuator/health/readiness | grep UP || exit 1"
+      interval: 2s
+      timeout: 3s
+      retries: 2
+      start_period: 20s
+    volumes:
+      - ems_logs:/app/logs
+    networks:
+      - backend
+    depends_on:
+      - admin-db
+      - discovery-service
+
+  simple-service:
+      image: "aston/ems.simple-service:latest"
+      pull_policy: never
+      container_name: ems.simple-service
+      ports:
+        - '9001:9001'
+      environment:
+        - SPRING_PROFILES_ACTIVE=docker
+      healthcheck:
+        test: "curl --fail --silent localhost:9001/actuator/health/readiness | grep UP || exit 1"
+        interval: 2s
+        timeout: 3s
+        retries: 2
+        start_period: 20s
+      volumes:
+        - ems_logs:/app/logs
+      networks:
+        - backend
+      depends_on:
+        - discovery-service
+
+volumes:
+  ems_logs:
+     driver: local  
+                     
+networks:
+  backend:
+    driver: bridge

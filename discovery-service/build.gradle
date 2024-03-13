@@ -1,0 +1,9 @@
+group 'online.gladikov.laboratory.discovery'
+	
+	dependencies {
+		implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-server'
+		implementation project(':common-lib')
+	}
+	
+	
+

@@ -1,0 +1,45 @@
+spring:
+  main:
+    web-application-type: SERVLET
+  application:
+    name: gateway-service
+  cloud:
+server:
+    port: 9001
+
+#logging:
+#  level:
+#    root: INFO
+##    '[org.springframework]' : INFO
+#    '[org.springframework.cloud]' : INFO
+#    '[org.aston.ems]' : DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      probes:
+        enabled: true
+
+---
+spring:
+  config:
+    activate:
+      on-profile: docker
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery-service:8000/eureka
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka
+    
