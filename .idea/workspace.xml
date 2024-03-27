@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ad5883df-dd20-4385-9bd8-7a6d7c83317d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/modules/kafka-consumer/laboratory.kafka-consumer.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/kafka-producer/laboratory.kafka-producer.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/reactive-service/laboratory.reactive-service.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/simple-service/laboratory.simple-service.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components.xmi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka-consumer/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka-consumer/src/main/java/online/gladikov/laboratory/kafka_consumer/config/KafkaConsumerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka-consumer/src/main/java/online/gladikov/laboratory/kafka_consumer/service/MessageConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka-consumer/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka-consumer/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka-producer/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka-producer/src/main/java/online/gladikov/laboratory/kafka_producer/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka-producer/src/main/java/online/gladikov/laboratory/kafka_producer/config/KafkaConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka-producer/src/main/java/online/gladikov/laboratory/kafka_producer/config/KafkaProducerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka-producer/src/main/java/online/gladikov/laboratory/kafka_producer/service/KafkaSchedule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka-producer/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka-producer/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reactive-service/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reactive-service/src/main/java/online/gladikov/laboratory/reactive/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reactive-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reactive-service/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-service/src/main/java/online/gladikov/laboratory/simple_web/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-service/src/main/java/online/gladikov/laboratory/simple_web/bean/BeanDependencyOne.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-service/src/main/java/online/gladikov/laboratory/simple_web/bean/BeanDependencyTwo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-service/src/main/java/online/gladikov/laboratory/simple_web/bean/TestBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-service/src/main/java/online/gladikov/laboratory/simple_web/config/Config.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-service/src/main/java/online/gladikov/laboratory/simple_web/config/FilterConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-service/src/main/java/online/gladikov/laboratory/simple_web/config/WebConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-service/src/main/java/online/gladikov/laboratory/simple_web/controller/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-service/src/main/java/online/gladikov/laboratory/simple_web/dto/Params.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-service/src/main/java/online/gladikov/laboratory/simple_web/filter/ByeFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-service/src/main/java/online/gladikov/laboratory/simple_web/filter/RequestResponseLoggingFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-service/src/main/java/online/gladikov/laboratory/simple_web/filter/TransactionFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-service/src/main/java/online/gladikov/laboratory/simple_web/interceptor/CustomInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-service/src/main/java/online/gladikov/laboratory/simple_web/service/RestartService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-service/src/main/java/online/gladikov/laboratory/simple_web/util/TestBeanPostProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/online/gladikov/laboratory/gateway/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/online/gladikov/laboratory/gateway/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/simple-service/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-service/src/main/java/online/gladikov/laboratory/simple_service/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-consumer/src/main/java/online/gladikov/laboratory/kafka_consumer/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/simple-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-service/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/simple-service/src/main/resources/logback-spring.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Record" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2e7b4b6cwgWLaNJxmd2qcYqB4ux" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.laboratory:gateway-service [:gateway-service:Application.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.laboratory:simple-service [:simple-service:Application.main()].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/max/dev/java/liberty_bank/abs/CardService&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Application.online.gladikov.laboratory.gateway.Application">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <envs>
+        <env name="SPRING_PROFILES_ACTIVE" value="dev" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="online.gladikov.laboratory.simple_web.Application" />
+      <module name="laboratory.simple-service.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="online.gladikov.laboratory.simple_web.bean.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="online.gladikov.laboratory.gateway.Application" type="Application" factoryName="Application" nameIsGenerated="true">
+      <envs>
+        <env name="SPRING_PROFILES_ACTIVE" value="dev" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="online.gladikov.laboratory.gateway.Application" />
+      <module name="laboratory.gateway-service.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="online.gladikov.laboratory.gateway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Application" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ad5883df-dd20-4385-9bd8-7a6d7c83317d" name="Changes" comment="" />
+      <created>1711258374815</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1711258374815</updated>
+    </task>
+    <servers />
+  </component>
+</project>
