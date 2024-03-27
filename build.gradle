@@ -39,7 +39,7 @@ dependencyManagement {
 
 
 version = '0.0.1'
-def springProjects=[project(':admin-service'),project(':gateway-service'),project(':discovery-service'), project(':simple-service')]
+def springProjects=[project(':admin-service'),project(':gateway-service'),project(':discovery-service'), project(':simple-service'), project(':reactive-service'), project(':kafka-producer'), project(':kafka-consumer')]
 def libraryProjects=[project(':common-lib')]
 
 bootJar.enabled = false

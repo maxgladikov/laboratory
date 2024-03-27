@@ -2,10 +2,10 @@ spring:
   main:
     web-application-type: SERVLET
   application:
-    name: gateway-service
+    name: simple-service
   cloud:
 server:
-    port: 9001
+    port: 9010
 
 #logging:
 #  level:
@@ -23,6 +23,9 @@ management:
     health:
       probes:
         enabled: true
+    restart:
+     enabled: true
+
 
 ---
 spring:
@@ -40,6 +43,7 @@ spring:
       on-profile: dev
 eureka:
   client:
+    enabled: false
     serviceUrl:
       defaultZone: http://localhost:8000/eureka
     

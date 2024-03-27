@@ -16,13 +16,19 @@
         <processorPath useClasspath="false">
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.30/f195ee86e6c896ea47a1d39defbe20eb59cd149d/lombok-1.18.30.jar" />
         </processorPath>
-        <module name="laboratory.common-lib.main" />
-        <module name="laboratory.gateway-service.test" />
         <module name="laboratory.discovery-service.main" />
+        <module name="laboratory.kafka-producer.test" />
         <module name="laboratory.simple-service.test" />
         <module name="laboratory.gateway-service.main" />
         <module name="laboratory.simple-service.main" />
         <module name="laboratory.discovery-service.test" />
+        <module name="laboratory.common-lib.main" />
+        <module name="laboratory.gateway-service.test" />
+        <module name="laboratory.kafka-producer.main" />
+        <module name="laboratory.kafka-consumer.test" />
+        <module name="laboratory.kafka-consumer.main" />
+        <module name="laboratory.reactive-service.main" />
+        <module name="laboratory.reactive-service.test" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="17" />

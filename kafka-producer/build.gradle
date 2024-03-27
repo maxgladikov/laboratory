@@ -1,14 +1,15 @@
 
-group 'online.gladikov.laboratory.simple-service'
+group 'online.gladikov.laboratory.kafka-producer'
 
 	
 	dependencies {
 		implementation project(':common-lib')
-		implementation 'org.springframework.boot:spring-boot-starter-web'
+		implementation 'org.springframework.kafka:spring-kafka'
+		testImplementation 'org.springframework.boot:spring-boot-starter-test'
+		testImplementation 'org.springframework.kafka:spring-kafka-test'
 		implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
 		implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
 		implementation 'io.github.openfeign:feign-jackson:13.2.1'
-		implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.4.0'
 	}
 
 

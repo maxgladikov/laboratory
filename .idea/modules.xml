@@ -5,6 +5,10 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/common-lib/laboratory.common-lib.main.iml" filepath="$PROJECT_DIR$/.idea/modules/common-lib/laboratory.common-lib.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/discovery-service/laboratory.discovery-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/discovery-service/laboratory.discovery-service.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/gateway-service/laboratory.gateway-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/gateway-service/laboratory.gateway-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kafka-consumer/laboratory.kafka-consumer.main.iml" filepath="$PROJECT_DIR$/.idea/modules/kafka-consumer/laboratory.kafka-consumer.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kafka-producer/laboratory.kafka-producer.main.iml" filepath="$PROJECT_DIR$/.idea/modules/kafka-producer/laboratory.kafka-producer.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/reactive-service/laboratory.reactive-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/reactive-service/laboratory.reactive-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/simple-service/laboratory.simple-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/simple-service/laboratory.simple-service.main.iml" />
     </modules>
   </component>
 </project>

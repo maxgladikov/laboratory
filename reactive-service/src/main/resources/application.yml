@@ -1,22 +1,11 @@
 spring:
   main:
-    web-application-type: REACTIVE
+    web-application-type: SERVLET
   application:
     name: gateway-service
   cloud:
-   gateway:
-     default-filters:
-        - StripPrefix=1
-        - AddRequestHeader=proxied, true
-     routes:
-     - id: admin-service
-       uri: http://localhost:3333
-       predicates:
-         - Path=/card/**
-
-
 server:
-    port: 8080
+    port: 9001
 
 #logging:
 #  level:
@@ -51,7 +40,6 @@ spring:
       on-profile: dev
 eureka:
   client:
-    enabled: false
     serviceUrl:
       defaultZone: http://localhost:8000/eureka
     
