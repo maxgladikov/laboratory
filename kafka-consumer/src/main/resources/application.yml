@@ -1,6 +1,6 @@
 spring:
   kafka:
-    bootstrap-servers: "192.168.201.201:29092"
+    bootstrap-servers: "192.168.201.201:32002"
     topic: laboratory
   main:
     web-application-type: NONE
@@ -9,6 +9,12 @@ spring:
   cloud:
 server:
   port: 9002
+
+eureka:
+  client:
+    enabled: false
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka
 
 #logging:
 #  level:

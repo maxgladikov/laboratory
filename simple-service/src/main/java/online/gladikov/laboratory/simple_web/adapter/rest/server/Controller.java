@@ -1,4 +1,4 @@
-package online.gladikov.laboratory.simple_web.controller;
+package online.gladikov.laboratory.simple_web.adapter.rest.server;
 
 import online.gladikov.laboratory.simple_web.dto.Params;
 import org.springframework.web.bind.annotation.GetMapping;
